@@ -4,6 +4,7 @@ import Banner from '../components/Banner'
 import SmallCard from '../components/SmallCard'
 import MediumCard from '../components/MediumCard'
 import LargeCard from '../components/LargeCard'
+import Footer from '../components/Footer'
 
 // ON NEXT WE HAVE STATIC RENDER AND SERVER SIDE RENDER,
 // on this home page the data don change so much and thtas why,
@@ -65,6 +66,8 @@ const Home = ({ exploreData, cardsData }) => {
           />
         </section>
       </main>
+
+      <Footer />
     </div>
   )
 }
