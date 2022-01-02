@@ -11,6 +11,7 @@ const Header = () => {
           layout="fill"
           objectFit="contain"
           objectPosition="left"
+          alt=""
         />
       </div>
 
