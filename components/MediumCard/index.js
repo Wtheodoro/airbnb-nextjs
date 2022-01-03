@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 // WHEN USING LAYOUT FILL FROM IMAGE/NEXT COMPONENT, THE PARENT DIV MUST BE POSITION RELATIVE.
-// otherwise the image will fill the hole page
+// otherwise the image will fill the Whole page
 // parent div must have the dimensions defined
 
 const MediumCard = ({ img, title }) => {
