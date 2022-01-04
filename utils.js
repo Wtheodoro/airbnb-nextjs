@@ -1,0 +1,1 @@
+export const isPlural = (value) => ((value === 0 || value > 1) ? 's' : '')
