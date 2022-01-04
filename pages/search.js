@@ -8,7 +8,7 @@ import InfoCard from "../components/InfoCard"
 const Search = ({ searchResults }) => {
   const router = useRouter()
 
-  const { location, startDate, endDate, noOfGuests } = router.query
+  const { location, startDate, endDate, noOfGuests, days } = router.query
   const queryLocation = location
 
   const formatedStartDate = format(new Date(startDate), "MMM dd, yyyy")
@@ -45,6 +45,7 @@ const Search = ({ searchResults }) => {
                   star={star}
                   price={price}
                   total={total}
+                  days={days}
                 />
               ))
             }

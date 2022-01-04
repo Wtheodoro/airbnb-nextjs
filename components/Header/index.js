@@ -11,6 +11,7 @@ const Header = ({ placeholder }) => {
   const [startDate, setStartDate] = useState(new Date())
   const [endDate, setEndDate] = useState(new Date())
   const [numberOfGuests, setNumberOfGuests] = useState(2)
+
   const router = useRouter()
 
   const selectionRange = {
@@ -28,6 +29,12 @@ const Header = ({ placeholder }) => {
     setSearchInput("")
   }
 
+  const howManyDaysCounter = () => {   
+    const difference = Math.abs(startDate - endDate)
+    const days = difference/(1000 * 3600 * 24)
+    return days + 1
+  }
+
   const search = () => {
     router.push({
       pathname: '/search',
@@ -35,9 +42,11 @@ const Header = ({ placeholder }) => {
         location: searchInput,
         startDate: startDate.toISOString(),
         endDate: endDate.toISOString(),
-        noOfGuests: numberOfGuests
+        noOfGuests: numberOfGuests,
+        days: howManyDaysCounter()
       }
     })
+    setSearchInput('')
   }
 
   return (

@@ -2,10 +2,17 @@ import { HeartIcon } from "@heroicons/react/outline"
 import { StarIcon } from "@heroicons/react/solid"
 import Image from "next/image"
 
-const InfoCard = ({ img, location, queryLocation, title, description, star, price, total }) => {
+const InfoCard = ({ img, location, queryLocation, title, description, star, price, days }) => {
+  console.log(price)
+  // console.log(howManyDaysCounter)
 
   // JUST BECAUSE API RETURNS THE SAME LOCATION
   const redefineLocation = location.replace("London", queryLocation)
+
+  const getTotal = () => {
+    const pricePerDay = Number(price.split('£')[1].split('/')[0].trim())
+    return pricePerDay * days
+  }
 
   return (
     <div className="flex py-7 px-2 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t">
@@ -33,7 +40,7 @@ const InfoCard = ({ img, location, queryLocation, title, description, star, pric
 
           <div>
             <p className="text-lg lg:text-2xl font-semibold pb-2">{price}</p>
-            <p className="text-right font-extralight">{total}</p>
+            <p className="text-right font-extralight">{getTotal()}</p>
           </div>
         </div>
       </div>
