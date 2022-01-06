@@ -4,6 +4,11 @@ Check the deploy [`preview`](https://airbnb-nextjs-nu.vercel.app/)
 
 ![GIF](https://github.com/Wtheodoro/airbnb-nextjs/blob/main/public/gif/airbnb.gif)
 
+## `Project purpose`
+- Practice NextJS Server Side Rendering - SSR
+- Practice Static Site Generation - SSG
+- Practice Tailwind
+- Practice Clean Code fundamentals
 ## `Builded with`
 - React
 - NextJS
