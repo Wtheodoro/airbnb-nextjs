@@ -4,6 +4,7 @@ import Header from "../components/Header"
 import { format } from "date-fns"
 import { isPlural } from "../utils"
 import InfoCard from "../components/InfoCard"
+import Map from "../components/Map"
 
 const Search = ({ searchResults }) => {
   const router = useRouter()
@@ -50,6 +51,10 @@ const Search = ({ searchResults }) => {
               ))
             }
           </div>
+        </section>
+
+        <section className="hidden xl:inline-flex xl:min-w-[400px]">
+          <Map searchResults={searchResults}/>
         </section>
       </main>
 
