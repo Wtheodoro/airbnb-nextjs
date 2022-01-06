@@ -9,6 +9,7 @@ Check the deploy [`preview`](https://airbnb-nextjs-nu.vercel.app/)
 - Practice Static Site Generation - SSG
 - Practice Tailwind
 - Practice Clean Code fundamentals
+- Experiment Increment Static Generation 
 - Experiment how Built-in Image and Automatic Image Optimization works
 ## `Built with`
 - React
