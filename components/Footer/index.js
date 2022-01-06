@@ -6,10 +6,10 @@ const Footer = () => {
         <h5 className="font-bold">CONTACT</h5>
         <p>Walison developer</p>
         <a href="https://www.linkedin.com/in/walisonteodoro/" rel="noopener noreferrer">
-          <p className="cursor-pointer mt-4">Linkedin</p>
+          <p className="cursor-pointer mt-4 animate-bounce font-bold">Linkedin</p>
         </a>
         <a href="https://github.com/Wtheodoro" rel="noopener noreferrer">
-          <p className="cursor-pointer mt-4">Github</p>
+          <p className="cursor-pointer mt-4 animate-bounce font-bold">Github</p>
         </a>
         <p>Investors</p>
         <p>Airbnb Plus</p>
