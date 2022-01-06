@@ -3,15 +3,12 @@ import { StarIcon } from "@heroicons/react/solid"
 import Image from "next/image"
 
 const InfoCard = ({ img, location, queryLocation, title, description, star, price, days }) => {
-  console.log(price)
-  // console.log(howManyDaysCounter)
-
   // JUST BECAUSE API RETURNS THE SAME LOCATION
   const redefineLocation = location.replace("London", queryLocation)
 
   const getTotal = () => {
     const pricePerDay = Number(price.split('£')[1].split('/')[0].trim())
-    return pricePerDay * days
+    return (pricePerDay * days).toFixed(2)
   }
 
   return (
@@ -39,7 +36,7 @@ const InfoCard = ({ img, location, queryLocation, title, description, star, pric
           </p>
 
           <div>
-            <p className="text-lg lg:text-2xl font-semibold pb-2">{price}</p>
+            <p className="text-lg lg:text-2xl font-semibold pb-2">{price.replace('£', '$')}</p>
             <p className="text-right font-extralight">{getTotal()}</p>
           </div>
         </div>
