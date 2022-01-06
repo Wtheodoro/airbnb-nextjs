@@ -5,10 +5,10 @@ const Footer = () => {
       <div className="space-y-4 text-xs text-gray-800">
         <h5 className="font-bold">CONTACT</h5>
         <p>Walison developer</p>
-        <a href="https://www.linkedin.com/in/walisonteodoro/" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/walisonteodoro/" target="_blank" rel="noopener noreferrer">
           <p className="cursor-pointer mt-4 animate-bounce font-bold">Linkedin</p>
         </a>
-        <a href="https://github.com/Wtheodoro" rel="noopener noreferrer">
+        <a href="https://github.com/Wtheodoro" target="_blank" rel="noopener noreferrer">
           <p className="cursor-pointer mt-4 animate-bounce font-bold">Github</p>
         </a>
         <p>Investors</p>
