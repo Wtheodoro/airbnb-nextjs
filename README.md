@@ -1,6 +1,6 @@
 # A NextJS airbnb
 
-[`preview`](https://airbnb-nextjs-nu.vercel.app/)
+Check the deploy [`preview`](https://airbnb-nextjs-nu.vercel.app/)
 
 ![GIF](https://github.com/Wtheodoro/airbnb-nextjs/blob/main/public/gif/airbnb.gif)
 
