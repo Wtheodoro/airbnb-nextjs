@@ -9,7 +9,7 @@ Check the deploy [`preview`](https://airbnb-nextjs-nu.vercel.app/)
 - Practice Static Site Generation - SSG
 - Practice Tailwind
 - Practice Clean Code fundamentals
-## `Builded with`
+## `Built with`
 - React
 - NextJS
 - TailwindCSS
