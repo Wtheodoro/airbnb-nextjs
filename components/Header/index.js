@@ -90,19 +90,27 @@ const Header = ({ placeholder }) => {
           onChange={(e) => setSearchInput(e.target.value)}
           type="text"
           placeholder={placeholder || "Start your search"}
-          className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
+          className={
+            !!scrollTop || searchInput
+            ? "flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
+            : "flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-white"
+          }
         />
         <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer mx-2"/>
       </div>
 
-      <div className="flex items-center justify-end space-x-4 text-gray-500">
+      <div className={
+        !!scrollTop || searchInput
+        ? "flex items-center justify-end space-x-4 text-gray-500"
+        : "flex items-center justify-end space-x-4 text-white"
+      }>
         <p className="hidden md:inline">Become a Host</p>
         <GlobeAltIcon className="h-6 cursor-pointer"/>
 
         <div className={
           !!scrollTop || searchInput
           ? "flex items-center space-x-2 border-2 p-2 rounded-full"
-          : "flex items-center space-x-2 border-2 bg-white p-2 rounded-full"
+          : "flex items-center space-x-2 border-2 bg-white p-2 rounded-full text-gray-500"
         }>
           <MenuIcon className="h-6"/>
           <UserCircleIcon className="h-6"/>
