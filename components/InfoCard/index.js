@@ -32,7 +32,7 @@ const InfoCard = ({ img, location, queryLocation, title, description, star, pric
         <div className="flex justify-between items-end pt-5">
           <p className="flex items-center">
             <StarIcon className="h-5 text-red-400"/>
-            {star}
+            {star.toFixed(1)}
           </p>
 
           <div>
