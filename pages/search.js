@@ -35,9 +35,9 @@ const Search = ({ searchResults }) => {
 
           <div className="flex flex-col">
             {
-              searchResults?.map(({ img, location, title, description, star, price, total }) => (
+              searchResults?.map(({ id, img, location, title, description, star, price, total }) => (
                 <InfoCard
-                  key={`${img}_${location}_${title}`}
+                  key={id}
                   img={img}
                   location={location}
                   queryLocation={queryLocation}
@@ -66,7 +66,7 @@ const Search = ({ searchResults }) => {
 export default Search
 
 export const getServerSideProps = async () => {
-  const searchResults = await fetch('https://links.papareact.com/isz')
+  const searchResults = await fetch('https://airbnb-api.herokuapp.com/api/searchResults')
     .then((response) => response.json())
 
     return {
