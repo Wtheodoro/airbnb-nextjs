@@ -21,7 +21,9 @@ const Home = ({ exploreData, cardsData }) => {
 
       <Header />
 
-      <Banner />
+      <div className='bg-black h-[410px] sm:h-[510px] lg:h-[610px] xl-h[710px] 2xl:h-[810px]'>
+        <Banner />
+      </div>
 
       <main className='max-w-7xl mx-auto px-8 sm:px-16'>
         <section className='pt-6'>

@@ -4,11 +4,12 @@ import Image from "next/image"
 const Banner = () => {
 
   return (
-    <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] xl-h[600px] 2xl:h-[700px]">
+    <div className="relative mx-auto w-11/12 h-[300px] sm:h-[400px] lg:h-[500px] xl-h[600px] 2xl:h-[700px]">
       <Image
         src="https://links.papareact.com/0fm"
         layout="fill"
         objectFit="cover"
+        className="rounded-2xl"
         alt=""
       />
       <div className="absolute top-1/2 w-full text-center">

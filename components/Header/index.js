@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon, UserIcon, UsersIcon } from "@heroicons/react/solid"
 import 'react-date-range/dist/styles.css';
@@ -7,6 +7,7 @@ import { DateRangePicker } from 'react-date-range';
 import { useRouter } from "next/router";
 
 const Header = ({ placeholder }) => {
+  const [scrollTop, setScrollTop] = useState(0)
   const [searchInput, setSearchInput] = useState("")
   const [startDate, setStartDate] = useState(new Date())
   const [endDate, setEndDate] = useState(new Date())
@@ -19,6 +20,15 @@ const Header = ({ placeholder }) => {
     endDate,
     key: 'selection',
   }
+
+  useEffect(() => {
+    const onScroll = (event) => {
+      setScrollTop(event.target.documentElement.scrollTop)
+    }
+    window.addEventListener("scroll", onScroll)
+
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [scrollTop])
 
   const handleSelect = (ranges) => {
     setStartDate(ranges.selection.startDate)
@@ -50,8 +60,16 @@ const Header = ({ placeholder }) => {
   }
 
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
-      <div className="relative flex rangess-center h-10 cursor-pointer my-auto">
+    <header className={
+      !!scrollTop || searchInput
+      ? "sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10 transform duration-300"
+      : "sticky top-0 z-50 grid grid-cols-3 bg-black p-8 md:px-10 transform duration-300"
+      }>
+      <div className={
+        !!scrollTop || searchInput
+        ? "relative flex rangess-center h-10 cursor-pointer my-auto transform duration-300"
+        : "relative flex rangess-center h-8 cursor-pointer my-auto transform duration-300"
+      }>
         <Image
           src='https://links.papareact.com/qd3'
           layout="fill"
@@ -62,7 +80,11 @@ const Header = ({ placeholder }) => {
         />
       </div>
 
-      <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-sm">
+      <div className={
+        !!scrollTop || searchInput
+        ? "flex items-center md:border-2 rounded-full py-2 md:shadow-sm"
+        : "flex items-center md:border-2 rounded-full py-0 md:shadow-sm"
+      }>
         <input
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
@@ -77,7 +99,11 @@ const Header = ({ placeholder }) => {
         <p className="hidden md:inline">Become a Host</p>
         <GlobeAltIcon className="h-6 cursor-pointer"/>
 
-        <div className="flex items-center space-x-2 border-2 p-2 rounded-full">
+        <div className={
+          !!scrollTop || searchInput
+          ? "flex items-center space-x-2 border-2 p-2 rounded-full"
+          : "flex items-center space-x-2 border-2 bg-white p-2 rounded-full"
+        }>
           <MenuIcon className="h-6"/>
           <UserCircleIcon className="h-6"/>
         </div>
