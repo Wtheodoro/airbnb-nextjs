@@ -12,7 +12,7 @@ const Banner = () => {
         className="rounded-2xl"
         alt=""
       />
-      <div className="absolute top-1/2 w-full text-center">
+      <div className="absolute top-1/4 md:top-1/3 lg:top-1/2 w-full text-center">
         <p className="text-white text-sm sm:text-lg">Not sure where to go? Perfect.</p>
         <button className="text-purple-500 bg-white px-10 py-4 shadow-md rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150">I&apos;m flexible</button>
       </div>
