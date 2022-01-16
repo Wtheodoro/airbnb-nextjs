@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon, UserIcon, UsersIcon } from "@heroicons/react/solid"
+import { SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon, UsersIcon } from "@heroicons/react/solid"
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { DateRangePicker } from 'react-date-range';
@@ -111,8 +111,8 @@ const Header = ({ placeholder, animated }) => {
 
         <div className={
           !!scrollTop || searchInput
-          ? "flex items-center space-x-2 border-2 p-2 rounded-full"
-          : "flex items-center space-x-2 border-2 bg-white p-2 rounded-full text-gray-500"
+          ? "flex items-center space-x-2 border-2 p-2 rounded-full text-gray-500"
+          : "flex items-center space-x-2 border-2 p-2 rounded-full text-white"
         }>
           <MenuIcon className="h-6"/>
           <UserCircleIcon className="h-6"/>
