@@ -144,7 +144,7 @@ const Header = ({ placeholder, animated }) => {
           </div>
           <div className="flex">
             <button className="flex-grow text-gray-500" onClick={resetInput}>Cancel</button>
-            <button className="flex-grow text-red-400" onClick={search}>Search</button>
+            <button className="flex-grow bg-red-400 text-white rounded-full" onClick={search}>Search</button>
           </div>
         </div>
       }
