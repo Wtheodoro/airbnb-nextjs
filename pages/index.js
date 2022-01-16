@@ -7,7 +7,7 @@ import LargeCard from '../components/LargeCard'
 import Footer from '../components/Footer'
 
 // ON NEXT WE HAVE STATIC RENDER AND SERVER SIDE RENDER,
-// on this home page the data don change so much and thtas why,
+// on this home page the data don't change so much and thtas why,
 // i'll use static render.
 
 const Home = ({ exploreData, cardsData }) => {
@@ -19,7 +19,7 @@ const Home = ({ exploreData, cardsData }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header animated/>
 
       <div className='bg-black h-[410px] sm:h-[510px] lg:h-[610px] xl-h[710px] 2xl:h-[810px]'>
         <Banner />

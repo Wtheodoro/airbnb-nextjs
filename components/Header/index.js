@@ -6,8 +6,8 @@ import 'react-date-range/dist/theme/default.css';
 import { DateRangePicker } from 'react-date-range';
 import { useRouter } from "next/router";
 
-const Header = ({ placeholder }) => {
-  const [scrollTop, setScrollTop] = useState(0)
+const Header = ({ placeholder, animated }) => {
+  const [scrollTop, setScrollTop] = useState(animated ? 0 : 1)
   const [searchInput, setSearchInput] = useState("")
   const [startDate, setStartDate] = useState(new Date())
   const [endDate, setEndDate] = useState(new Date())
@@ -22,13 +22,15 @@ const Header = ({ placeholder }) => {
   }
 
   useEffect(() => {
+    if (!animated) return
+
     const onScroll = (event) => {
       setScrollTop(event.target.documentElement.scrollTop)
     }
     window.addEventListener("scroll", onScroll)
 
     return () => window.removeEventListener("scroll", onScroll)
-  }, [scrollTop])
+  }, [scrollTop, animated])
 
   const handleSelect = (ranges) => {
     setStartDate(ranges.selection.startDate)
